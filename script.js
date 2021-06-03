@@ -18,6 +18,6 @@ function compute() {
   You will receive an amount of <mark>${compute}</mark>, <br />
   in the year <mark>${2021 + Number(years.value)}</mark>`;
   } else {
-    alert("please enter a positive value");
+    window.alert("please enter a positive value");
   }
 }
