@@ -12,8 +12,12 @@ function compute() {
   let compute =
     Number(amount.value) * (Number(slider.value) / 100) * Number(years.value);
 
-  result.innerHTML = `If you deposit <mark>${amount.value}</mark>,<br />
+  if (Number(amount.value) > 0) {
+    result.innerHTML = `If you deposit <mark>${amount.value}</mark>,<br />
   at an interest rate of <mark>${slider.value}%</mark>. <br />
   You will receive an amount of <mark>${compute}</mark>, <br />
   in the year <mark>${2021 + Number(years.value)}</mark>`;
+  } else {
+    alert("please enter a positive value");
+  }
 }
